@@ -1,0 +1,903 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+
+{
+
+  int a,b,c,q,x,k,i,ans,temp,j,j2,j3,j4,j5,j6,j7,j8,j9,n;
+
+  int arr[50];
+
+  int flag=1;
+
+  a=1;
+
+  b=2;
+
+  i=1;
+
+  arr[0]=1;
+
+  while(b<1000000000)
+
+  {
+
+    arr[i]=b;
+
+    i++;
+
+    c=b;
+
+    b+=a;
+
+    a=c;
+
+  }
+
+  scanf("%d",&q);
+
+  while (q--)
+
+  {
+
+    scanf("%d %d",&x,&k);
+
+    ans=0;
+
+    n=43;
+
+    flag=1;
+
+    if(k==1)
+
+    {
+
+      for(i=0;i<n&&flag;i++)
+
+      {
+
+        if(arr[i]==x)
+
+        {
+
+          ans=1;
+
+          break;
+
+        }
+
+        else if(arr[i]>x)
+
+        {
+
+          break;
+
+        }
+
+      }
+
+    }
+
+    else if(k==2)
+
+    {
+
+      for(i=0;i<n&&flag;i++)
+
+      {
+
+        for(j=i;j<n&&flag;j++)
+
+        {
+
+          if(arr[i]+arr[j]==x)
+
+          {
+
+            ans++;
+
+          }
+
+          else if(arr[i]+arr[j]>x)
+
+          {
+
+            break;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    else if(k==3)
+
+    {
+
+      for(i=0;i<n&&flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            temp=arr[i]+arr[j]+arr[j2];
+
+            if(temp==x)
+
+            {
+
+              ans++;
+
+            }
+
+            else if(temp>x)
+
+            {
+
+              break;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    else if(k==4)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              temp=arr[i]+arr[j]+arr[j2]+arr[j3];
+
+              if(temp==x)
+
+              {
+
+                ans++;
+
+              }
+
+              else if(temp>x)
+
+              {
+
+                break;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    else if(k==5)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              for(j4=j3;j4<n && flag;j4++)
+
+              {
+
+                temp=arr[i]+arr[j]+arr[j2]+arr[j3]+arr[j4];
+
+                if(temp==x)
+
+                {
+
+                  ans++;
+
+                }
+
+                else if(temp>x)
+
+                {
+
+                  break;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    else if(k==6)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              for(j4=j3;j4<n && flag;j4++)
+
+              {
+
+                for(j5=j4;j5<n;j5++)
+
+                {
+
+                  temp=arr[i]+arr[j]+arr[j2]+arr[j3]+arr[j4]+arr[j5];
+
+                  if(temp==x)
+
+                  {
+
+                    ans++;
+
+                  }
+
+                  else if(temp>x)
+
+                  {
+
+                    break;
+
+                  }
+
+                }
+
+                if(temp>x)
+
+                {
+
+                  break;
+
+                }
+
+              }
+
+              if(temp>x)
+
+              {
+
+                break;
+
+              }
+
+            }
+
+            if(temp>x)
+
+            {
+
+              break;
+
+            }
+
+          }
+
+          if(temp>x)
+
+          {
+
+            break;
+          }
+        }
+
+        if(temp>x)
+
+        {
+
+          break;
+
+        }
+
+      }
+
+    }
+
+    else if(k==7)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              for(j4=j3;j4<n && flag;j4++)
+
+              {
+
+                for(j5=j4;j5<n;j5++)
+
+                {
+
+                  for(j6=j5;j6<n;j6++)
+
+                  {
+
+                    temp=arr[i]+arr[j]+arr[j2]+arr[j3]+arr[j4]+arr[j5]+arr[j6];
+
+                    if(temp==x)
+
+                    {
+
+                      ans++;
+
+                    }
+
+                    else if(temp>x)
+
+                    {
+
+                      break;
+
+                    }
+
+                  }
+
+                  if(temp>x)
+
+                  {
+
+                    break;
+
+                  }
+
+                }
+
+                if(temp>x)
+
+                {
+
+                  break;
+
+                }
+
+              }
+
+              if(temp>x)
+
+              {
+
+                break;
+
+              }
+
+            }
+
+            if(temp>x)
+
+            {
+
+              break;
+
+            }
+
+          }
+
+          if(temp>x)
+
+          {
+
+            break;
+
+          }
+
+        }
+
+        if(temp>x)
+
+        {
+
+          break;
+
+        }
+
+      }
+
+    }
+
+    else if(k==8)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              for(j4=j3;j4<n && flag;j4++)
+
+              {
+
+                for(j5=j4;j5<n;j5++)
+
+                {
+
+                  for(j6=j5;j6<n;j6++)
+
+                  {
+
+                    for(j7=j6;j7<n;j7++)
+
+                    {
+
+                      temp=arr[i]+arr[j]+arr[j2]+arr[j3]+arr[j4]+arr[j5]+arr[j6]+arr[j7];
+
+                      if(temp==x)
+
+                      {
+
+                        ans++;
+
+                      }
+
+                      else if(temp>x)
+
+                      {
+
+                        break;
+
+                      }
+
+                    }
+
+                    if(temp>x)
+
+                    {
+
+                      break;
+
+                    }
+
+                  }
+
+                  if(temp>x)
+
+                  {
+
+                    break;
+
+                  }
+
+                }
+
+                if(temp>x)
+
+                {
+
+                  break;
+
+                }
+
+              }
+
+              if(temp>x)
+
+              {
+
+                break;
+
+              }
+
+            }
+
+            if(temp>x)
+
+            {
+
+              break;
+
+            }
+
+          }
+
+          if(temp>x)
+
+          {
+
+            break;
+
+          }
+
+        }
+
+        if(temp>x)
+
+        {
+
+          break;
+
+        }
+
+      }
+
+    }
+
+    else if(k==9)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              for(j4=j3;j4<n && flag;j4++)
+
+              {
+
+                for(j5=j4;j5<n;j5++)
+
+                {
+
+                  for(j6=j5;j6<n;j6++)
+
+                  {
+
+                    for(j7=j6;j7<n;j7++)
+
+                    {
+
+                      for(j8=j7;j8<n;j8++)
+
+                      {
+
+                        temp=arr[i]+arr[j]+arr[j2]+arr[j3]+arr[j4]+arr[j5]+arr[j6]+arr[j7]+arr[j8];
+
+                        if(temp==x)
+
+                        {
+
+                          ans++;
+
+                        }
+
+                        else if(temp>x)
+
+                        {
+
+                          break;
+
+                        }
+
+                      }
+
+                      if(temp>x)
+
+                      {
+
+                        break;
+
+                      }
+
+                    }
+
+                    if(temp>x)
+
+                    {
+
+                      break;
+
+                    }
+
+                  }
+
+                  if(temp>x)
+
+                  {
+
+                    break;
+
+                  }
+
+                }
+
+                if(temp>x)
+
+                {
+
+                  break;
+
+                }
+
+              }
+
+              if(temp>x)
+
+              {
+
+                break;
+
+              }
+
+            }
+
+            if(temp>x)
+
+            {
+
+              break;
+
+            }
+
+          }
+
+          if(temp>x)
+
+          {
+
+            break;
+
+          }
+
+        }
+
+        if(temp>x)
+
+        {
+
+          break;
+
+        }
+
+      }
+
+    }
+
+    else if(k==10)
+
+    {
+
+      for(i=0;i<n && flag;i++)
+
+      {
+
+        for(j=i;j<n && flag;j++)
+
+        {
+
+          for(j2=j;j2<n && flag;j2++)
+
+          {
+
+            for(j3=j2;j3<n && flag;j3++)
+
+            {
+
+              for(j4=j3;j4<n && flag;j4++)
+
+              {
+
+                for(j5=j4;j5<n;j5++)
+
+                {
+
+                  for(j6=j5;j6<n;j6++)
+
+                  {
+
+                    for(j7=j6;j7<n;j7++)
+
+                    {
+
+                      for(j8=j7;j8<n;j8++)
+
+                      {
+
+                        for(j9=j8;j9<n;j9++)
+
+                        {
+
+                          temp=arr[i]+arr[j]+arr[j2]+arr[j3]+arr[j4]+arr[j5]+arr[j6]+arr[j7]+arr[j8]+arr[j9];
+
+                          if(temp==x)
+
+                          {
+
+                            ans++;
+
+                          }
+
+                          else if(temp>x)
+
+                          {
+
+                            break;
+
+                          }
+
+                        }
+
+                        if(temp>x)
+
+                        {
+
+                          break;
+
+                        }
+
+                      }
+
+                      if(temp>x)
+
+                      {
+
+                        break;
+
+                      }
+
+                    }
+
+                    if(temp>x)
+
+                    {
+
+                      break;
+
+                    }
+
+                  }
+
+                  if(temp>x)
+
+                  {
+
+                    break;
+
+                  }
+
+                }
+
+                if(temp>x)
+
+                {
+
+                  break;
+
+                }
+
+              }
+
+              if(temp>x)
+
+              {
+
+                break;
+
+              }
+
+            }
+
+            if(temp>x)
+
+            {
+
+              break;
+
+            }
+
+          }
+
+          if(temp>x)
+
+          {
+
+            break;
+
+          }
+
+        }
+
+        if(temp>x)
+
+        {
+
+          break;
+
+        }
+
+      }
+
+    }
+
+    printf("%d\n",ans);
+
+  }
+
+  return 0;
+
+}              
